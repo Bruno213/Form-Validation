@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="CSS/styles.css" rel="stylesheet">
+  <title>Form Validation</title>
+</head>
+<body>
+  <header>
+    <div class="top">
+      <h1>Cadastro</h1>
+    </div>
+  </header>
+  <section>
+    <form class="form" method="#">
+      <div class="form-title"><p>Preencha com suas informações pessoais</p></div>
+
+      <div class="form-info">
+
+        <div class="form-data-area">
+
+          <div class="form-data">
+            <label for="full-name" class="data-title">Nome</label>
+
+            <input 
+            class="input-data"
+            type="text" 
+            name="full-name" 
+            id="full-name" 
+            autocomplete="off"
+            placeholder="Seu nome completo" 
+            required
+            />
+          </div>
+
+        </div>
+
+        <div class="form-data-area">
+
+          <div class="form-data margin">
+            <label for="contato" class="data-title">Telefone para Contato</label>
+
+            <input 
+            class="input-data"
+            type="text" 
+            name="contato" 
+            id="contato" 
+            minlength="8"
+            maxlength="9"
+            placeholder="Formato: XXXXX-XXXX"
+            required
+            />
+          </div>
+
+          <div class="form-data">
+            <label for="Email" class="data-title">E-mail</label>
+
+            <input 
+            class="input-data"
+            type="email" 
+            name="Email" 
+            id="Email" 
+            placeholder="ex: CondorianoSilva@gmail.com.br" 
+            required
+            />
+          </div>
+
+        </div>
+
+        <div class="form-data-area">
+
+          <div class="form-data margin">
+            <label for="CPF" class="data-title">CPF</label>
+
+            <input 
+            class="input-data"
+            type="text" 
+            name="CPF" 
+            id="CPF" 
+            autocomplete="off"
+            minlength="11"
+            maxlength="11"
+            pattern="(\d{3}\.?)(\d{3}\.?)(\d{3}\-?)(\d{2})"
+            placeholder="Digite seu CPF" 
+            required
+            />
+          </div>
+
+          <div class="form-data margin">
+            <label for="Date" class="data-title">Data de Nascimento</label>
+
+            <input 
+            class="number"
+            type="text" 
+            name="Date" 
+            id="Date"
+            minlength="8"
+            pattern="(\d{2}\/?)(\d{2}\/?)(\d{4})"
+            placeholder=" XX/XX/XXXX" 
+            required
+            />
+          </div>
+
+          <div class="form-data">
+            <p class="data-title">Sexo</p>
+            
+            <div class="option-content">
+              <input class="sex" type="radio" name="Sex" id="Masc" checked />
+              <label for="Masc" class="sex-title">Masculino</label>
+              
+              <input class="sex" type="radio" name="Sex" id="Fem" />
+              <label for="Fem" class="sex-title">Feminino</label>
+            </div> 
+          </div>
+
+        </div>
+
+        <div class="form-data-area">
+          
+          <div class="form-data margin">
+            <p class="data-title">Estado Civil</p>
+
+            <select class="select-data">
+
+              <option value="Solteiro">Solteiro</option>
+              <option value="Casado">Casado</option>
+              <option value="Separado">Separado</option>
+              <option value="Divorciado">Divorciado</option>
+              <option value="Viúvo">Viúvo</option>
+
+            </select>
+          </div>
+
+          <div class="form-data">
+            <label for="Renda" class="data-title">Renda Mensal</label>
+
+              <input 
+              class="input-data"
+              type="number" 
+              name="Renda" 
+              id="Renda"
+              placeholder="0.00" 
+              required
+              />
+          </div>
+
+        </div>
+
+        <div id="Adress">Endereço</div>
+
+        <div class="form-data-area">
+
+          <div class="form-data margin" id="flex-2">
+            <label for="Logradouro" class="data-title">Logradouro</label>
+
+              <input 
+              class="input-data"
+              type="text" 
+              name="Logradouro" 
+              id="Logradouro" 
+              autocomplete="off"
+              placeholder="logradouro" 
+              required
+              />
+          </div>
+
+          <div class="form-data margin">
+            <label for="Numero" class="data-title">Número</label>
+
+              <input 
+              class="input-data"
+              type="number" 
+              name="Numero" 
+              id="Numero"
+              placeholder="N&deg;" 
+              required
+              />
+          </div>
+
+          <div class="form-data">
+            <label for="Complemento" class="data-title">Complemento</label>
+
+              <input 
+              class="input-data"
+              type="text" 
+              name="Complemento" 
+              id="Complemento" 
+              placeholder="complemento"
+              />
+          </div>
+
+        </div>
+        <div class="form-data-area">
+
+          <div class="form-data margin">
+            <p class="data-title">Estado</p>
+
+            <select class="select-data" id="estados"></select>
+          </div>
+
+          <div class="form-data">
+            <label for="Cidade" class="data-title">Cidade</label>
+
+              <input 
+              class="input-data"
+              type="text" 
+              name="Cidade" 
+              id="Cidade" 
+              pattern="[a-z]? [A-Z]?{30}"
+              placeholder="ex: Belo Horizonte" 
+              required
+              />
+          </div>
+
+        </div>
+      </div>
+      <div class="form-button-area">
+        <input class="form-button" id="btnEnviar" type="submit" value="Cadastrar">
+      </div>
+    </form>
+  </section>
+
+
+  <section class="modal">
+    <div class="user-datas">
+      <div class="complete">
+        <h1 class="fraseDeEfeito">Fala pequeno Gafanhoto !!!!!!</h1>
+        <p>A função gerar dados ainda não está disponivel. 
+          Futuramente, quem sabe está função passe a existir.
+          Por hora, fique com este link para meu layout de pizzas no github:</p>
+          <a href="https://github.com/Bruno213/Pizza-Base" class="link" target="_Blank">https://github.com/Bruno213/Pizza-Base</a>
+      </div>
+    </div>
+  </section>
+
+  <script type="text/javascript" src="JS/estados.mjs"></script>
+  <script type="text/javascript" src="JS/index.js"></script>
+</body>
+</html>
