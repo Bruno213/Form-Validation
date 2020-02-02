@@ -130,7 +130,7 @@ header, section {
   border-bottom: 1px solid #b2c0ca93;
 }
 
-#flex-2 {
+#flex-2, #EC-flex-2 {
   flex: 2;
 }
 
@@ -221,9 +221,20 @@ header, section {
     color: #3a5a7a;  
 }
 
-
-@media (min-width: 320px) and (max-width:650px) {
+@media (max-width: 700px) {
   .form-data-area .form-data.margin {
-    margin-right: 0px !important;
+    margin-right: 0 !important;
+  }
+  .form-data-area .form-data {
+    min-width: 350px;
+  }
+}
+
+@media (max-width:340px) {
+  .form-data-area .form-data.margin {
+    margin-right: 0 !important;
+  }
+  .form-data-area .form-data {
+    min-width: 295px;
   }
 }

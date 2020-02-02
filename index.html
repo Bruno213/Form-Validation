@@ -88,11 +88,11 @@
             />
           </div>
 
-          <div class="form-data margin">
+          <div class="form-data">
             <label for="Date" class="data-title">Data de Nascimento</label>
 
             <input 
-            class="number"
+            class="input-data"
             type="text" 
             name="Date" 
             id="Date"
@@ -103,7 +103,10 @@
             />
           </div>
 
-          <div class="form-data">
+        </div>
+        <div class="form-data-area">
+
+          <div class="form-data margin">
             <p class="data-title">Sexo</p>
             
             <div class="option-content">
@@ -114,12 +117,8 @@
               <label for="Fem" class="sex-title">Feminino</label>
             </div> 
           </div>
-
-        </div>
-
-        <div class="form-data-area">
           
-          <div class="form-data margin">
+          <div class="form-data" id="EC-flex-2">
             <p class="data-title">Estado Civil</p>
 
             <select class="select-data">
@@ -148,25 +147,46 @@
 
         </div>
 
-        <div id="Adress">Endereço</div>
-
         <div class="form-data-area">
 
-          <div class="form-data margin" id="flex-2">
-            <label for="Logradouro" class="data-title">Logradouro</label>
+          <div class="form-data margin">
+            <p class="data-title">Estado</p>
+
+            <select class="select-data" id="estados"></select>
+          </div>
+
+          <div class="form-data">
+            <label for="Cidade" class="data-title">Cidade</label>
 
               <input 
               class="input-data"
               type="text" 
-              name="Logradouro" 
-              id="Logradouro" 
-              autocomplete="off"
-              placeholder="logradouro" 
+              name="Cidade" 
+              id="Cidade" 
+              pattern="[a-z]? [A-Z]?{30}"
+              placeholder="ex: Belo Horizonte" 
               required
               />
           </div>
 
-          <div class="form-data margin">
+        </div>
+        <div class="form-data-area">
+
+          <div class="form-data margin" id="flex-2">
+            <label for="Endereço" class="data-title">Endereço</label>
+
+              <input 
+              class="input-data"
+              type="text" 
+              name="Endereço" 
+              id="Endereço" 
+              autocomplete="off"
+              placeholder="av. tal tal tal" 
+              required
+              />
+          </div>
+
+          <div class="form-data">
             <label for="Numero" class="data-title">Número</label>
 
               <input 
@@ -192,29 +212,7 @@
           </div>
 
         </div>
-        <div class="form-data-area">
-
-          <div class="form-data margin">
-            <p class="data-title">Estado</p>
-
-            <select class="select-data" id="estados"></select>
-          </div>
-
-          <div class="form-data">
-            <label for="Cidade" class="data-title">Cidade</label>
-
-              <input 
-              class="input-data"
-              type="text" 
-              name="Cidade" 
-              id="Cidade" 
-              pattern="[a-z]? [A-Z]?{30}"
-              placeholder="ex: Belo Horizonte" 
-              required
-              />
-          </div>
-
-        </div>
+       
       </div>
       <div class="form-button-area">
         <input class="form-button" id="btnEnviar" type="submit" value="Cadastrar">
